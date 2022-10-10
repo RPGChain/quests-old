@@ -1,0 +1,1 @@
+You got hit, but still have enough energy to take one more attack.

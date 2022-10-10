@@ -1,0 +1,1 @@
+A [SIDE_ENEMY.NAME] lingers nearby. It seems ready to fight.
