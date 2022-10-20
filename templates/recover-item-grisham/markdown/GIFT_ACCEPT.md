@@ -1,0 +1,2 @@
+
+You’ve seen strange things in your lifetime. In moments like these, it’s best to take whatever aid is offered to you without worrying too much where it comes from.  You take the [PUZZLE.ROOMHINT] and go off towards the [ITEM_LOCATION.NAME]. 
