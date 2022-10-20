@@ -1,0 +1,1 @@
+Your defenses have been overcome. You take a hit and can retreat before you succumb to unconsciousness. When you awaken, your wound is a bit better. You need attack again. The [SIDE_ENEMY.NAME] is still ahead. Waiting.

@@ -1,0 +1,4 @@
+[PUZZLE.SUCCESS_DESCRIPTION]
+
+You find an item: [TREASURE.NAME]!
+It’s a ruby red key -> [TREASURE.DESCRIPTION]!
