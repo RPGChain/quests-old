@@ -1,0 +1,208 @@
+{
+    "rolls": [
+        {
+            "dcParent": "TRAP.DC",
+            "key": "TRAP",
+            "label": "Rolling to avoid the trap",
+            "actionSuccess": "page:TRAP_SUCCESS",
+            "actionFail": "page:TRAP_FAIL"
+        },
+        {
+            "dcParent": "SIDE_ENEMY.DC",
+            "key": "ENEMY_ATTACK",
+            "label": "Rolling to attack the enemy",
+            "actionSuccess": "page:ENEMY_ATTACK_SUCCESS",
+            "actionFail": "page:ENEMY_ATTACK_FAIL"
+        },
+        {
+            "dcParent": "SIDE_ENEMY.DC",
+            "key": "ENEMY_ATTACK_2",
+            "label": "Rolling to attack the enemy",
+            "actionSuccess": "page:ENEMY_ATTACK_2_SUCCESS",
+            "actionFail": "page:ENEMY_ATTACK_2_FAIL"
+        },
+        {
+            "dcParent": "MAIN_ENEMY.DC",
+            "key": "BOSS_ATTACK",
+            "label": "Rolling to attack the enemy",
+            "actionSuccess": "page:BOSS_ATTACK_SUCCESS",
+            "actionFail": "page:BOSS_ATTACK_FAIL"
+        },
+        {
+            "dcParent": "MAIN_ENEMY.DC",
+            "key": "BOSS_ATTACK_2",
+            "label": "Rolling to attack the enemy",
+            "actionSuccess": "page:BOSS_ATTACK_2_SUCCESS",
+            "actionFail": "page:BOSS_ATTACK_2_FAIL"
+        }
+    ],
+    "pages": [
+        {
+            "key": "INDEX",
+            "image": "[TOWN.IMAGE]",
+            "options": [
+                {"action":"page:TRAVEL","label": "I will recover this item for you"}
+            ]
+        },
+        {
+            "key": "TRAVEL",
+            "image": "[GIVER.IMAGE]",
+            "options": [
+                {"action":"page:ENTER_ITEM_LOCATION","label": "Enter [ITEM_LOCATION.NAME]"}
+            ]
+        },
+        {
+            "key": "ENTER_ITEM_LOCATION",
+            "image": "[ITEM_LOCATION.IMAGE]",
+            "options": [
+                {"action":"page:PUZZLE","label": "Head towards [PUZZLE.ROOM_HINT]"},
+                {"action":"page:ENEMY","label": "Continue towards [SIDE_ENEMY.ROOM_HINT]"}
+            ]
+        },
+        {
+            "key": "PUZZLE",
+            "image": "[PUZZLE.IMAGE]",
+            "options": [
+                {"action":"page:PUZZLE_FAIL","label": "[PUZZLE.OPTION_INVALID_1]"},
+                {"action":"page:PUZZLE_FAIL","label": "[PUZZLE.OPTION_INVALID_2]"},
+                {"action":"page:PUZZLE_SUCCESS","label": "[PUZZLE.OPTION_VALID]"},
+                {"action":"page:ENEMY","label": "Return to the previous room and take the other path"}
+            ]
+        },
+        {
+            "key": "PUZZLE_SUCCESS",
+            "image": "[PUZZLE.IMAGE]",
+            "options": [
+                {"action":"page:TRAP","label": "Continue ahead"},
+                {"action":"page:ENEMY","label": "Return to the previous room and take the other path"}
+            ],
+            "rewards": [
+                "[TREASURE.KEY]"
+            ]
+        },
+        {
+            "key": "PUZZLE_FAIL",
+            "image": "[PUZZLE.IMAGE]",
+            "options": [
+                {"action":"page:ENEMY","label": "Return to the previous room and take the other path"}
+            ]
+        },
+        {
+            "key": "ENEMY",
+            "image": "[SIDE_ENEMY.IMAGE]",
+            "options": [
+                {"action":"roll:ENEMY_ATTACK","label": "Attack!"}
+            ]
+        },
+        {
+            "key": "ENEMY_ATTACK_SUCCESS",
+            "image": "[SIDE_ENEMY.IMAGE]",
+            "options": [
+                {"action":"page:TRAP","label": "Continue forward...carefully"}
+            ],
+            "displayRolls": ["ENEMY_ATTACK"],
+            "xp": 50
+        },
+        {
+            "key": "ENEMY_ATTACK_FAIL",
+            "image": "[SIDE_ENEMY.IMAGE]",
+            "options": [
+                {"action":"roll:ENEMY_ATTACK_2","label": "Attack again!"}
+            ],
+            "displayRolls": ["ENEMY_ATTACK"]
+        },
+        {
+            "key": "ENEMY_ATTACK_2_SUCCESS",
+            "image": "[SIDE_ENEMY.IMAGE]",
+            "options": [
+                {"action":"page:TRAP","label": "Continue forward"}
+            ],
+            "displayRolls": ["ENEMY_ATTACK_2"],
+            "xp": 25
+        },
+        {
+            "key": "ENEMY_ATTACK_2_FAIL",
+            "image": "[SIDE_ENEMY.IMAGE]",
+            "options": [],
+            "displayRolls": ["ENEMY_ATTACK_2"],
+            "completionStatus": "FAILED"
+        },
+        {
+            "key": "TRAP",
+            "image": "[TRAP.IMAGE]",
+            "options": [
+                {"action":"roll:TRAP","label": "Attempt to avoid trap"}
+            ]
+        },
+        {
+            "key": "TRAP_SUCCESS",
+            "image": "[TRAP.IMAGE]",
+            "options": [
+                {"action":"page:BOSS","label": "Continue Ahead"}
+            ],
+            "displayRolls": ["TRAP"],
+            "xp": 25
+        },
+        {
+            "key": "TRAP_FAIL",
+            "image": "[TRAP.IMAGE]",
+            "options": [
+                {"action":"page:BOSS","label": "Continue Ahead"}
+            ],
+            "displayRolls": ["TRAP"]
+        },
+        {
+            "key": "BOSS",
+            "image": "[MAIN_ENEMY.IMAGE]",
+            "options": [
+                {"action":"roll:BOSS_ATTACK","label": "Attack!"}
+            ]
+        },
+        {
+            "key": "BOSS_ATTACK_SUCCESS",
+            "image": "[MAIN_ENEMY.IMAGE]",
+            "options": [
+                {"action":"page:FIND_ITEM","label": "Keep moving forward"}
+            ],
+            "displayRolls": ["BOSS_ATTACK"],
+            "xp": 100
+        },
+        {
+            "key": "BOSS_ATTACK_FAIL",
+            "image": "[MAIN_ENEMY.IMAGE]",
+            "options": [
+                {"action":"roll:BOSS_ATTACK_2","label": "Attack again!"}
+            ],
+            "displayRolls": ["BOSS_ATTACK"]
+        },
+        {
+            "key": "BOSS_ATTACK_2_SUCCESS",
+            "image": "[MAIN_ENEMY.IMAGE]",
+            "options": [
+                {"action":"page:FIND_ITEM","label": "Keep moving forward"}
+            ],
+            "displayRolls": ["BOSS_ATTACK_2"],
+            "xp": 50
+        },
+        {
+            "key": "BOSS_ATTACK_2_FAIL",
+            "image": "[MAIN_ENEMY.IMAGE]",
+            "options": [],
+            "displayRolls": ["BOSS_ATTACK_2"],
+            "completionStatus": "FAILED"
+        },
+        {
+            "key": "FIND_ITEM",
+            "image": "[ITEM.IMAGE]",
+            "options": [
+                {"action":"page:DELIVER","label": "Return to [ITEM_LOCATION.NAME]"}
+            ]
+        },
+        {
+            "key": "DELIVER",
+            "image": "[ITEM.IMAGE]",
+            "options": [],
+            "completionStatus": "SUCCESS"
+        }
+    ]
+}
