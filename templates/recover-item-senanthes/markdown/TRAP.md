@@ -1,0 +1,3 @@
+A corridor stretches before you, long and inlaid with intricate, if faded, detail in it’s workmanship. Your attention is drawn towards the minutiae around you...
+
+[TRAP.INTRODUCTION_DESCRIPTION]

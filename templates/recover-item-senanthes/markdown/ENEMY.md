@@ -1,0 +1,1 @@
+An [SIDE_ENEMY.NAME] lingers nearby. You very nearly taste the danger on the air..
