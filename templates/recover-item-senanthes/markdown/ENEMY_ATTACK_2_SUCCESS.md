@@ -1,0 +1,3 @@
+An [SIDE_ENEMY.NAME] presses it’s attack, though with perseverance and a keen skill, you prevail! Somewhat fatigued, you stand over your fallen foe...
+
+Ahead lies a path foreward. Surely, anywhere is better than here.

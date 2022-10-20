@@ -1,0 +1,1 @@
+A final blow, and the [MAIN_ENEMY.NAME] claims it’s latest prey! You fall to the floor, beaten, and swiftly fade away... For good? Who is to say?

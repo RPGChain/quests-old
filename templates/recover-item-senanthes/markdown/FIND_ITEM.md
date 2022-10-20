@@ -1,0 +1,3 @@
+Weapon at the ready, you slowly enter the next chamber. Your senses are uncomfortably aware of every little sound, every flicker of shadow... You feel both elated and in a state of dread at what awaits you further...
+
+Wait! Up ahead, an antechamber is revealed, and a shimmer catches your gaze near it’s center... You recover: [ITEM.NAME]! All that remains is to return to [GIVER.NAME].

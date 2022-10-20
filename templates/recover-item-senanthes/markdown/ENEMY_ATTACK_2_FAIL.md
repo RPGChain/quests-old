@@ -1,0 +1,1 @@
+The [SIDE_ENEMY.NAME] overcomes you, and before you fade into darkness, your last thought is a pang of fear before nothingness becomes your world... Whether you awaken? That remains to be seen.

@@ -1,0 +1,1 @@
+The [SIDE_ENEMY.NAME] presses you hard, and you quickly find yourself on the back foot! If you can’t recover, this may surely be your end!
