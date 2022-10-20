@@ -1,0 +1,1 @@
+You make your way to the [TOWN.NAME] and return the [ITEM.NAME] so the town’s vitality could be restored. 

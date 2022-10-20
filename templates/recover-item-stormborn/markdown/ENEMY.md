@@ -1,0 +1,1 @@
+A giant [SIDE_ENEMY.NAME] pounces on you, screeching and jarring at your face. You are drenched completely with its thick saliva.

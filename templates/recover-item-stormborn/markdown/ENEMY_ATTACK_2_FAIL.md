@@ -1,0 +1,1 @@
+The [SIDE_ENEMY.NAME] has overhauled you. Better luck next time!
